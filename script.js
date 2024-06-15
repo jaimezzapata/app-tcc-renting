@@ -1,4 +1,11 @@
-let usuarios = [];
+let usuarios = [
+  {
+    name: "Jaime Zapata",
+    email: "correo@correo.com",
+    password: "123456",
+    phone: "3152001282",
+  },
+];
 let usuario = {};
 
 function createUser() {
@@ -17,10 +24,17 @@ function createUser() {
   console.log(usuarios);
 }
 
-function login() {
+function searchUser() {
   let email = document.querySelector("#l-email").value;
   let password = document.querySelector("#l-password").value;
-  if (email === "correo@correo.com" && password === "123456") {
+  let auth = usuarios.some(
+    (element) => email === element.email && password === element.password
+  );
+  return auth;
+}
+
+function login() {
+  if (searchUser()) {
     console.log("Inicio de sesión correcto..");
   } else {
     console.log("Credenciales incorrectas...");
