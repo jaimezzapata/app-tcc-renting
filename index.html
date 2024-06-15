@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>App</title>
+  </head>
+  <body>
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <form class="login">
+      <h3>Iniciar Sesión</h3>
+      <input type="text" placeholder="User" />
+      <input type="password" placeholder="Password" />
+      <button>Login</button>
+      <p>¿No tiene cuenta?. Registrarse</p>
+    </form>
+    <form class="registro">
+      <h3>Nuevo Usuario</h3>
+      <input name="name" type="text" placeholder="Name" />
+      <input name="email" type="text" placeholder="Email" />
+      <input name="password" type="password" placeholder="Password" />
+      <input name="phone" type="password" placeholder="Phone" />
+      <button onclick="registrarUsuario()">Registro</button>
+      <p>¿Ya tiene cuenta?. Iniciar Sesion</p>
+    </form>
+  </body>
+</html>
