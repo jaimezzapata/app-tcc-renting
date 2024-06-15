@@ -17,7 +17,18 @@ function createUser() {
   console.log(usuarios);
 }
 
+function login() {
+  let email = document.querySelector("#l-email").value;
+  let password = document.querySelector("#l-password").value;
+  if (email === "correo@correo.com" && password === "123456") {
+    console.log("Inicio de sesión correcto..");
+  } else {
+    console.log("Credenciales incorrectas...");
+  }
+}
+
 document.getElementById("createUser").addEventListener("click", createUser);
+document.getElementById("login").addEventListener("click", login);
 
 function showFormRegister() {
   document.getElementById("formLogin").style.display = "none";
