@@ -58,3 +58,13 @@ document
 document
   .getElementById("showFormRegister")
   .addEventListener("click", showFormRegister);
+
+let inputs = document.querySelectorAll("input");
+// let inputs = document.getElementsByTagName("input");
+inputs.forEach((elemet) => {
+  elemet.addEventListener("keyup", validarFormulario);
+});
+
+function validarFormulario() {
+  console.log("Presionando tecla");
+}
