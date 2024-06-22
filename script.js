@@ -66,10 +66,18 @@ inputs.forEach((elemet) => {
   // elemet.addEventListener("blur", validarFormulario);
 });
 
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
 function validarFormulario(e) {
   switch (e.target.name) {
     case "l-email":
-      console.log("Input de correo de login");
+      if (emailRegex.test(e.target.value)) {
+        console.log("Cumple");
+        document.getElementById("l-password").style.display = "block";
+      } else {
+        console.log("No cumple");
+        document.getElementById("l-password").style.display = "none";
+      }
       break;
   }
 }
