@@ -20,22 +20,27 @@
     </div>
     <form id="formLogin" class="login">
       <h3>Iniciar Sesión</h3>
-      <input id="l-email" type="text" placeholder="User" />
-      <input id="l-password" type="password" placeholder="Password" />
+      <input name="l-email" id="l-email" type="text" placeholder="User" />
+      <input
+        name="l-password"
+        id="l-password"
+        type="password"
+        placeholder="Password"
+      />
       <button type="button" id="login">Login</button>
       <p id="showFormRegister">¿No tiene cuenta?. Registrarse</p>
     </form>
     <form id="formRegister" class="registro" style="display: none">
       <h3>Nuevo Usuario</h3>
-      <input id="r-name" name="name" type="text" placeholder="Name" />
-      <input id="r-email" name="email" type="text" placeholder="Email" />
+      <input id="r-name" name="r-name" type="text" placeholder="Name" />
+      <input id="r-email" name="r-email" type="text" placeholder="Email" />
       <input
         id="r-password"
-        name="password"
+        name="r-password"
         type="password"
         placeholder="Password"
       />
-      <input id="r-phone" name="phone" type="tel" placeholder="Phone" />
+      <input id="r-phone" name="r-phone" type="tel" placeholder="Phone" />
       <button type="button" id="createUser">Registro</button>
       <p id="showFormLogin">¿Ya tiene cuenta?. Iniciar Sesion</p>
     </form>

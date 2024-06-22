@@ -63,8 +63,13 @@ let inputs = document.querySelectorAll("input");
 // let inputs = document.getElementsByTagName("input");
 inputs.forEach((elemet) => {
   elemet.addEventListener("keyup", validarFormulario);
+  // elemet.addEventListener("blur", validarFormulario);
 });
 
-function validarFormulario() {
-  console.log("Presionando tecla");
+function validarFormulario(e) {
+  switch (e.target.name) {
+    case "l-email":
+      console.log("Input de correo de login");
+      break;
+  }
 }
