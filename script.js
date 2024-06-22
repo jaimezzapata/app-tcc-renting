@@ -36,6 +36,13 @@ function searchUser() {
 function login() {
   if (searchUser()) {
     console.log("Inicio de sesión correcto..");
+    document.getElementById("formLogin").style.display = "none";
+    document.getElementById("formRegister").style.display = "none";
+    document.getElementById("cargando").src =
+      "https://codigofuente.io/wp-content/uploads/2018/09/progress.gif";
+    setTimeout(() => {
+      window.location.href = "https://regexr.com/";
+    }, 3000);
   } else {
     console.log("Credenciales incorrectas...");
   }
@@ -67,16 +74,30 @@ inputs.forEach((elemet) => {
 });
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const passwordRegex = /^[a-zA-Z0-9]{4,10}$/;
 
 function validarFormulario(e) {
   switch (e.target.name) {
     case "l-email":
       if (emailRegex.test(e.target.value)) {
         console.log("Cumple");
+        document.getElementById("l-email").classList.add("cumple");
+        document.getElementById("l-email").classList.remove("no-cumple");
         document.getElementById("l-password").style.display = "block";
       } else {
         console.log("No cumple");
         document.getElementById("l-password").style.display = "none";
+        document.getElementById("l-email").classList.add("no-cumple");
+      }
+      break;
+    case "l-password":
+      if (passwordRegex.test(e.target.value)) {
+        console.log("Cumple");
+        document.getElementById("l-password").classList.add("cumple");
+        document.getElementById("l-password").classList.remove("no-cumple");
+      } else {
+        console.log("No cumple");
+        document.getElementById("l-password").classList.add("no-cumple");
       }
       break;
   }
